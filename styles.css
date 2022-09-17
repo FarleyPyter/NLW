@@ -1,17 +1,16 @@
-*{ 
+/* resetando configurações do navegador com CSS*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 ul {
-    list-style: nome;
+    list-style: none;
 }
 
-
 body {
-
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assents/bg.jpg);
     background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -19,27 +18,26 @@ body {
 }
 
 body * {
-    font-family:'Inter' sans-serif;
-    line-height: 160%;   
-
-}  
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
 
 header {
     padding-top: 32px;
-    height: calc (120px + 32px);
-
+    height: calc(120px + 32px);
 }
 
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%,#E2D45C 100%);
-
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    
     border-radius: 50%;
+
     display: flex;
     padding: 4px;
 
-    transition: transform .4s;
+    transition: transform .3s;
 }
 
 header div:hover {
@@ -47,8 +45,8 @@ header div:hover {
 }
 
 header div img {
-    max-width: 100%;
-    border-radius: 50%;  
+    width: 100%;
+    border-radius: 50%;
 }
 
 main {
@@ -74,19 +72,20 @@ section div {
     border-radius: 8px;
 }
 
-section h2 {
-       letter-spacing: -0.47px;
+section h2{
+    letter-spacing: -0.47px;
 }
 
-section p {
-   letter-spacing: -0.18px;
-   color: #A1A1AA;
+section p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
 }
 
 section ul {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+
     margin-top: 24px;
 }
 
@@ -94,9 +93,9 @@ section ul li {
     transition: transform .3s;
 }
 
-section li:hover {
+section ul li:hover {
     transform: scale(1.1);
-}    
+}
 
 .games-list img {
     width: 90px;
@@ -111,15 +110,29 @@ section li:hover {
     height: 70px;
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%,#E2D45C 100%);
     border: 2px solid ;
-
 }
 
-/* Animação */
+/* animation */
 
 header div {
-    animation: fronTop .7s .4s backwards
+    animation: fromTop .7s .2s backwards;
 }
 
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .3s;
+}
+
+main section:nth-child(3){
+    animation-delay: .6s;
+}
 
 @keyframes fromTop {
     from {
@@ -133,7 +146,7 @@ header div {
     }
 }
 
-@keyframes fromBot {
+@keyframes fromBottom {
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -143,70 +156,4 @@ header div {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-@keyframes fromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes esmaecer {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-header div {
-    animation: fromTop .7s .2s backwards;
-}
-
-main section {
-    animation: fromBot .7s .4s backwards;
-}
-
-main section ul li {
-    animation: fromLeft .7 .6s backwards;
-}
-
-main section div h2, p {
-    animation: esmaecer .7s .7s backwards;
-}
-
-main section:nth-child(1) {
-    animation-delay: 0s;
-}
-
-main section:nth-child(2) {
-    animation-delay: .3s;
-}
-
-main section:nth-child(3) {
-    animation-delay: .6s;
-}
-
-main section ul li:nth-child(1) {
-    animation-delay: .8s;
-}
-
-main section ul li:nth-child(2) {
-    animation-delay: .9s;
-}
-
-main section ul li:nth-child(3) {
-    animation-delay: 1s;
-}
-
-main section ul li:nth-child(4) {
-    animation-delay: 1.1s;
 }
