@@ -1,6 +1,6 @@
 # NLW eSports
 
-![projeto1](./.github/projeto1.png)
+![nlw-projeto1](./.github/projeto1.png)
 
 Trilha Explorer
 
